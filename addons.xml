@@ -58,7 +58,7 @@
 	</extension>
 </addon>
 
-<addon id="service.iptvsimple.plugin.player" name="IPTV Simple Plugins Player" version="2.0.0" provider-name="ApolloGroup">
+<addon id="service.iptvsimple.plugin.player" name="IPTV Simple Plugins Player" version="2.0.0" provider-name="Kodi Group">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
   </requires>
