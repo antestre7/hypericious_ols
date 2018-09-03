@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="program.hypericious" version="3.7.7" name="Hypericious TV" provider-name="Hypericious">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+		<import addon="script.module.requests" version="2.4.3"/>
+		<import addon="script.exodus.artwork" version="1.0.4"/>
+		<import addon="script.exodus.metadata" version="1.0.0"/>
+		<import addon="script.module.metahandler" version="1.0.0"/>
+		<import addon="service.iptvsimple.plugin.player" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="pvr.py" start="[login|startup]"/>
+	<extension point="xbmc.service" library="alarm.py" start="[login|startup]"/>
+	<extension point="xbmc.addon.metadata">
+		<summary>Hypericious TV</summary>
+		<description></description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.hypericious" name="Hypericious Repo" version="1.0.0" provider-name="Hypericious">
+	<extension point="xbmc.addon.repository" name="Hypericious Repo">
+		<info>https://raw.githubusercontent.com/antestre7/hypericious/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/antestre7/hypericious/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/antestre7/hypericious/master/</datadir>
+	</extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Hypericious TV Repo</summary>
+        <description></description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="script.exodus.artwork" version="1.0.7" name="Exodus Artwork" provider-name="Exodus">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Themes for the Exodus Addon</summary>
+		<description></description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.exodus.metadata" version="1.0.2" name="Exodus Metadata" provider-name="Exodus">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Metadata for the Exodus Addon</summary>
+		<description>Metadata for Exodus are maintained separately to make distribution of the the addon itself easier/faster.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="service.iptvsimple.plugin.player" name="IPTV Simple Plugins Player" version="2.0.0" provider-name="ApolloGroup">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.service" library="service.py" start="login"/>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Play IPTV Simple plugins links</summary>
+  </extension>
+</addon>
+</addons>
